@@ -1,0 +1,24 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+        //by using brute force ,two loops go through the array one by one 
+            
+        for (int i=0; i< nums.length;i++){
+            
+            for(int j =i+1; j<nums.length;j++){
+                int result;
+                result = nums[i] +nums[j];
+                if(result==target){
+                    return new int[] {i, j} ;
+                    
+                    
+                }
+                
+            }
+        }
+        // if there is no such an solution, it still needs a return (why throw an exception in java?)
+        throw new IllegalArgumentException("No two sum solution");
+        
+    }
+    
+}
